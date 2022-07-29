@@ -1,0 +1,18 @@
+repository - dao관련
+web - controller, command,filter ...
+
+indexController
+
+package com.varxyz.banking.customer.repository;
+public interface CustomerRepository(impl과 비슷한 클래스)
+
+Customer save(Customer customer);
+
+Customer findBySsn(String ssn);
+List<> findByPhone(String phone);
+List<> findAll();
+Customer findByEmail(String email);
+
+
+spring form
+transactional : 분리할 수 없는 단위 - 어려운 이유 : 객체들의 기술적 다양성 / 다른 객체 호출에 복잡성 / 
