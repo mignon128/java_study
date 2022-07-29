@@ -3,52 +3,40 @@ package com.varxyz.banking.account.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import com.varxyz.banking.account.dao.AccountDao;
 import com.varxyz.banking.account.domain.Account;
 
-@Service
-public class AccountServiceImpl implements AccountService{
+
+public class AccountServiceImpl{
 	
 	@Autowired
 	AccountDao accountDao;
-	
-	@Override
-	public void addAccount(Account account) {
+
+	public void addAccounts(Account account) {
 		accountDao.addAccount(account);
 	}
+
 	
-	@Override
-	public List<Account> getAccountByAccountNum(String accountNum) {
-		return accountDao.findByAccountNum(accountNum);
-	}
-	
-	@Override
-	public List<Account> getAccountList(long customerId) {
-		return accountDao.findByCustomerId(customerId);
-	}
-	
-	@Override
-	public List<Account> getAllAccount() {
-		return accountDao.findAll();
+	public List<Account> getAccounts(String userId) {
+		return accountDao.getAccount(userId);
 	}
 
-//	@Override
-//	public long getBalance(String accountNum) {
-//		return accountDao.getBalance(accountNum);
-//	}
-//
-//	@Override
-//	public void transfer(double money, String withdrawAccountNum, String depositAccountNum) {
-//		accountDao.transfer(money, withdrawAccountNum, depositAccountNum);
-//		
-//	}
-//
-//	@Override
-//	public void saveInterest(String accountNum, double interestRate) {
-//		accountDao.saveInterest(accountNum, interestRate);
-//	}
+	
+	public long getBalance(String accountNum) {
+		return accountDao.getBalance(accountNum);
+	}
+
+	
+	public void transfer(double money, String withdrawAccountNum, String depositAccountNum) {
+		accountDao.transfer(money, withdrawAccountNum, depositAccountNum);
+		
+	}
+
+	
+	public void saveInterest(String accountNum, double interestRate) {
+		accountDao.saveInterest(accountNum, interestRate);
+	}
 
 	
 }

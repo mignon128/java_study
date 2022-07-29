@@ -41,13 +41,13 @@ public class AccountDao {
 		jdbcTemplate.update(sql, args, types);
 	}
 
-//	public List<Account> getAccount(String email) {
-//		String sql = "SELECT a.aid, a.customerId, a.accountNum, a.accType, a.balance"
-//				+ " a. interestRate, a.overAmount, a.redDate"
-//				+ " FROM Account a INNER JOIN Customer c ON a.customerId = c.cid" + " WHERE c.email=?";
-//
-//		return jdbcTemplate.query(sql, new CustomerAccountRowMapper(), email);
-//	}
+	public List<Account> getAccount(String email) {
+		String sql = "SELECT a.aid, a.customerId, a.accountNum, a.accType, a.balance"
+				+ " a. interestRate, a.overAmount, a.redDate"
+				+ " FROM Account a INNER JOIN Customer c ON a.customerId = c.cid" + " WHERE c.email=?";
+
+		return jdbcTemplate.query(sql, new CustomerAccountRowMapper() {}, email);
+	}
 
 	public void transfer(double money, String withdrawAccountNum, String depositAccountNum) {
 		String sql = "UPDATE Account SET balance = balance - ? WHERE accountNum=?";
@@ -68,21 +68,9 @@ public class AccountDao {
 		return jdbcTemplate.queryForObject(sql, Long.class, accountNum);
 	}
 
-	public List<Account> findByCustomerId(long customerId) {
+	public List<Account> findAccountByCustomerId(long customerId) {
 		String sql = "SELECT a.aid, a.customerId, a.accountNum, a.accType, a.balance, a.interestRate, a.overAmount, a.regDate FROM Account a INNER JOIN Customer c ON a.customerId = c.cid WHERE a.customerId = ?";
-		return jdbcTemplate.query(sql, new CustomerAccountRowMapper() {
-		}, customerId);
-	}
-
-	public List<Account> findByAccountNum(String accountNum) {
-		String sql = "SELECT a.aid, a.customerId, a.accountNum, a.accType, a.balance, a.interestRate, a.overAmount, a.regDate FROM Account a INNER JOIN Customer c ON a.customerId = c.cid WHERE a.accountNum = ?";
-		return jdbcTemplate.query(sql, new CustomerAccountRowMapper() {
-		}, accountNum);
-	}
-
-	public List<Account> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return jdbcTemplate.query(sql, new CustomerAccountRowMapper() {}, customerId);
 	}
 
 }

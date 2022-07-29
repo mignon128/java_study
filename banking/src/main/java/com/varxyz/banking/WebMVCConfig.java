@@ -1,4 +1,4 @@
-package com.varxyz.banking.config;
+package com.varxyz.banking;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -27,4 +27,4 @@ public class WebMVCConfig implements WebMvcConfigurer{
 	}
 }
 
-// account / auth(๋ก๊ทธ์ธ,๋ก๊ทธ์•์) / config / customer / excption /  
+// account / auth(๋ก๊ทธ?ธ,๋ก๊ทธ?•?) / config / customer / excption /  
