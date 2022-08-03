@@ -5,14 +5,14 @@
 		<div class="gnb">
 			<div class="left-gnb">
 				<ul>
-					<li><a href="/cafe/incl/index">홈</a></li>
+					<li><a href="/cafe/index">홈</a></li>
 				</ul>
 			</div>
 			<div class="right-gnb">
 				<ul>
-					<li><a href="/cafe">매출관리</a></li>
-					<li><a href="/cafe">주문관리</a></li>
-					<li><a href="/cafe">재고관리</a></li>
+					<li><a href="/cafe/manager/sales">매출관리</a></li>
+					<li><a href="/cafe/manager/order">주문관리</a></li>
+					<li><a href="/cafe/">재고관리</a></li>
 					<li><a href="/cafe">회원관리</a></li>
 				</ul>
 			</div>

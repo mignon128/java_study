@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Bank</title>
+<title>cafe</title>
 <link rel="stylesheet" type="text/css"
 	href="<c:url value='/resources/css/default.css'/>" />
 <link rel="stylesheet" type="text/css"
@@ -19,6 +19,7 @@
 	color: white;
 	font-family: "Jalnan";
 }
+
 .title-wrap {
 	width: 100%;
 	line-height: 60px;
@@ -55,34 +56,38 @@
 </head>
 <body>
 	<header>
-		<%@ include file="../incl/no_login_header.jsp"%>
+		<%@ include file="../incl/header.jsp"%>
 	</header>
 	<div class="wrap">
 		<div class="title-wrap">
-			<h3 class="title">회원가입 성공</h3>
+			<h3 class="title">메뉴등록 성공</h3>
 		</div>
 		<div class="rezInfo">
 			<table>
 				<tbody>
+					<!-- <tr>
+						<th>메뉴 카테고리</th>
+						<td>${menu.category}</td>
+					</tr> -->
 					<tr>
-						<th>E-mail</th>
-						<td>${customer.email}</td>
+						<th>메뉴 이름</th>
+						<td>${menu.name}</td>
 					</tr>
 					<tr>
-						<th>비밀번호</th>
-						<td>${customer.passwd}</td>
+						<th>메뉴 가격</th>
+						<td>${menu.price}</td>
 					</tr>
 					<tr>
-						<th>이름</th>
-						<td>${customer.name}</td>
+						<th>메뉴 사이즈</th>
+						<td>${menu.size}</td>
 					</tr>
 					<tr>
-						<th>주민번호</th>
-						<td>${customer.ssn}</td>
+						<th>메뉴 칼로리</th>
+						<td>${menu.kcal}</td>
 					</tr>
 					<tr>
-						<th>연락처</th>
-						<td>${customer.phone}</td>
+						<th>메뉴 이미지</th>
+						<td>${menu.img}</td>
 					</tr>
 				</tbody>
 			</table>

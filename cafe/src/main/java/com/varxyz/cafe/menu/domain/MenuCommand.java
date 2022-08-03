@@ -13,8 +13,7 @@ import lombok.ToString;
 @Setter
 @AllArgsConstructor
 @ToString
-public class Menu {
-	private long mid;
+public class MenuCommand {
 	private String category;
 	private String name;
 	private double price;
@@ -23,7 +22,7 @@ public class Menu {
 	private MultipartFile imgFile;
 	private String imgName;
 	
-	public Menu() {
+	public MenuCommand() {
 		
 	}
 }

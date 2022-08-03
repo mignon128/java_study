@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller("example5.addCustomerController")
-@RequestMapping("/example5/add_customer")
+@Controller("example6.addCustomerController")
+@RequestMapping("/example6/add_customer")
 public class AddAccountController {
 	@GetMapping
 	public String addCustomerform(Model model) {
 		model.addAttribute("customer", new AccountCommand());
-		return "example5/add_customer";
+		return "example6/add_customer";
 	}
 
 
@@ -29,7 +29,7 @@ public class AddAccountController {
 		model.addAttribute("customer", customer);
 		customer.setEmail(email);
 		customer.setPhone(phone);
-		return "example5/success_add_customer";
+		return "exampl6/success_add_customer";
 		
 	}
 }

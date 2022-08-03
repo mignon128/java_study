@@ -11,12 +11,11 @@ import lombok.ToString;
 @Setter
 @AllArgsConstructor
 @ToString
-public class Category {
-	private long cid;
+public class CategoryCommand {
 	private String name;
 	private Menu menu;
 	
-	public Category() {
+	public CategoryCommand() {
 		
 	}
 }

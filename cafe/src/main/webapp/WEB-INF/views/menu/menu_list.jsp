@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>bank</title>
+<title>cafe</title>
 <link rel="stylesheet" type="text/css"
 	href="<c:url value='/resources/css/default.css'/>" />
 <link rel="stylesheet" type="text/css"
@@ -56,31 +56,27 @@
 	</header>
 	<div class="wrap">
 		<div class="title-wrap">
-			<h3 class="title">고객 리스트</h3>
+			<h3 class="title">메뉴 리스트</h3>
 		</div>
 		<div class="rezInfo">
-			<c:forEach var="customer" items="${cusotmerList}">
+			<c:forEach var="menu" items="${menuList}">
 				<table>
 					<tbody>
 						<tr>
-							<th>E-mail</th>
-							<td>${customer.email}</td>
-						</tr>
-						<tr>
-							<th>비밀번호</th>
-							<td>${customer.passwd}</td>
-						</tr>
-						<tr>
 							<th>이름</th>
-							<td>${customer.name}</td>
+							<td>${menu.name}</td>
 						</tr>
 						<tr>
-							<th>주민번호</th>
-							<td>${customer.ssn}</td>
+							<th>가격</th>
+							<td>${menu.price}</td>
 						</tr>
 						<tr>
-							<th>연락처</th>
-							<td>${customer.phone}</td>
+							<th>사이즈</th>
+							<td>${menu.size}</td>
+						</tr>
+						<tr>
+							<th>칼로리</th>
+							<td>${menu.size}</td>
 						</tr>
 					</tbody>
 				</table>

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Bank</title>
+<title>cafe</title>
 <style>
 .gnb ul li a {
 	line-height: 70px;

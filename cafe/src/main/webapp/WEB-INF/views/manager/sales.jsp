@@ -187,7 +187,7 @@ button.btn-inner {
 </head>
 <body>
 	<header>
-		<%@ include file="../incl/no_login_header.jsp"%>
+		<%@ include file="../incl/header.jsp"%>
 	</header>
 	<main>
 		<section>

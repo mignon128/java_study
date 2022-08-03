@@ -6,15 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.varxyz.cafe.menu.dao.MenuDao;
+import com.varxyz.cafe.menu.domain.Menu;
 
 @Service
-public class MenuService {
+public interface MenuService {
 	
-	@Autowired
-	public MenuDao menuDao;
-	
-	public MenuService(MenuDao menuDao) {
-		this.menuDao = menuDao;
-	}
-
+	void addMenu(Menu menu);
+	List<Menu> findAllMenu();
+	List<Menu> findMenuBycid(String cid);
 }

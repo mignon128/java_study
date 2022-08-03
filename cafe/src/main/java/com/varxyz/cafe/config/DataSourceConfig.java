@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = "com.varxyz.banking")
+@ComponentScan(basePackages = "com.varxyz.cafe")
 public class DataSourceConfig {
 	
 	@Bean(destroyMethod = "close")

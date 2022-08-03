@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Bank</title>
+<title>cafe</title>
 <link rel="stylesheet" type="text/css"
 	href="<c:url value='/resources/css/default.css'/>" />
 <link rel="stylesheet" type="text/css"
@@ -188,30 +189,47 @@ button.btn-inner {
 </head>
 <body>
 	<header>
-		<%@ include file="../incl/no_login_header.jsp"%>
+		<%@ include file="../incl/header.jsp"%>
 	</header>
 	<section>
 		<div class="container">
 			<div class="title-wrap">
-				<h3 class="title">회원가입</h3>
+				<h3 class="title">메뉴 등록하기</h3>
 			</div>
 			<div id="content-wrapper">
 				<div class="content">
-					<form action="add_customer" method="post">
+					<form:form method="post" modelAttribute="menu" enctype="multipart/form-data">
+						<!--  <div class="add">
+							<label>메뉴 카테고리</label>
+							<form:select path="category">
+								<option value="unknown">---선택---</option>
+								<form:options items="${CategoryList }" />
+							</form:select>
+						</div>-->
 						<div class="add">
-							<label>E-mail</label><input type="text" name="email">
+							<label>메뉴 이름</label>
+							<form:input path="name" />
+							<br>
 						</div>
 						<div class="add">
-							<label>비밀번호</label><input type="password" name="passwd">
+							<label>메뉴 가격</label>
+							<form:input path="price" />
+							<br>
 						</div>
 						<div class="add">
-							<label>이름</label><input type="text" name="name">
+							<label>메뉴 사이즈</label>
+							<form:input path="size" />
+							<br>
 						</div>
 						<div class="add">
-							<label>주민번호</label><input type="text" name="ssn">
+							<label>메뉴 칼로리</label>
+							<form:input path="kcal" />
+							<br>
 						</div>
 						<div class="add">
-							<label>연락처</label><input type="text" name="phone">
+							<label>메뉴 이미지</label>
+							<form:input type="file" path="imgFile"/>
+							<br>
 						</div>
 						<div class="btn-group">
 							<div class="i-btn">
@@ -220,7 +238,7 @@ button.btn-inner {
 								</div>
 							</div>
 						</div>
-					</form>
+					</form:form>
 				</div>
 			</div>
 		</div>

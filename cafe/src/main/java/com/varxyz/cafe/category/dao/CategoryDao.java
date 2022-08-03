@@ -21,17 +21,12 @@ public class CategoryDao {
 	}
 	
 	public void addCategory(Category category) {
-		String sql = "INSERT INTO Menu (cname) VALUES (?)";
+		String sql = "INSERT INTO Category (cname) VALUES (?)";
 		jdbcTemplate.update(sql, category.getName());
 	}
 
-//	public List<Menu> findAllMenu() {
-//		String sql = "SELECT mid, menuname, menuPrice, menuSize, menuKcal regDate FROM Menu";
-//		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Menu>(Menu.class));
-//	}
-//
-//	public List<Menu> findMenuByctype(String ctype) {
-//		String sql = "SELECT m.mid, m.menuname, m.menuPrice, m.menuSize, m.menuKcal, m.regDate FROM Menu m INNER JOIN Category c ON m.menuname = c.cid WHERE c.ctype=?";
-//		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Menu>(Menu.class), ctype);
-//	}
+	public List<Category> findAllCategory() {
+		String sql = "SELECT cid, cname, regDate FROM Category";
+		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Category>(Category.class));
+	}
 }

@@ -323,30 +323,26 @@ button.btn-inner {
 	<section>
 		<div class="container">
 			<div class="title-wrap">
-				<h3 class="title">정보수정</h3>
+				<h3 class="title">메뉴 수정</h3>
 			</div>
 			<div id="content-wrapper">
 				<div class="content">
-					<form class="add_customer" action="customer_update" method="post">
-						<div class="add customer_id">
-							<input type="text" name="userId" value="${userId}" readonly>
-							<span class="id">* 아이디는 수정이 되지 않습니다.</span>
-						</div>
-						<div class="add">
-							<input type="password" name="password" placeholder="비밀번호"
-								value="${customer.passwd }">
-						</div>
-						<div class="add">
+					<form class="add_menu" action="menu_update" method="post">
+					<div class="add">
 							<input type="text" name="name" placeholder="이름"
-								value="${customer.name }">
+								value="${menu.name }">
 						</div>
 						<div class="add">
-							<input type="text" name="ssn" placeholder="주민번호"
-								value="${customer.ssn }">
+							<input type="text" name="price" placeholder="가격"
+								value="${menu.price }">
 						</div>
 						<div class="add">
-							<input type="text" class="phoneNum" name="phoneNum"
-								placeholder="휴대폰번호" value="${customer.phone }">
+							<input type="text" name="size" placeholder="사이즈"
+								value="${menu.size }">
+						</div>
+						<div class="add">
+							<input type="text" name="kcal" placeholder="칼로리"
+								value="${menu.kcal }">
 						</div>
 						<div class="btn-group">
 							<div class="i-btn">

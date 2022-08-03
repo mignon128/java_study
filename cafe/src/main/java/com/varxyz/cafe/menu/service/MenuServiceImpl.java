@@ -3,24 +3,29 @@ package com.varxyz.cafe.menu.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.varxyz.cafe.menu.dao.MenuDao;
 import com.varxyz.cafe.menu.domain.Menu;
 
-public class MenuServiceImpl{
+@Service
+public class MenuServiceImpl implements MenuService{
 	
 	@Autowired
 	MenuDao menuDao;
 
+	@Override
 	public void addMenu(Menu menu) {
-		menuDao.addMenu(menu);
+		menuDao.addMenu(menu);	
 	}
-	
+
+	@Override
 	public List<Menu> findAllMenu() {
 		return menuDao.findAllMenu();
 	}
-	
-	public List<Menu> findMenuByctype(String ctype) {
-		return menuDao.findMenuByctype(ctype);
+
+	@Override
+	public List<Menu> findMenuBycid(String cid) {
+		return menuDao.findMenuByctype(cid);
 	}
 }
