@@ -11,19 +11,14 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@ToString
 public class Menu {
 	private long mid;
 	private String category;
 	private String name;
 	private double price;
-	private double size;
+	private String size;
 	private double kcal;
-	private MultipartFile imgFile;
+	private int count;
+//	private MultipartFile imgFile;
 	private String imgName;
-	
-	public Menu() {
-		
-	}
 }

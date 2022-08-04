@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -65,29 +64,33 @@
 		<div class="rezInfo">
 			<table>
 				<tbody>
-					<!-- <tr>
+					<tr>
 						<th>메뉴 카테고리</th>
-						<td>${menu.category}</td>
-					</tr> -->
+						<td>${menu.category }</td>
+					</tr>
 					<tr>
 						<th>메뉴 이름</th>
-						<td>${menu.name}</td>
+						<td>${menu.name }</td>
 					</tr>
 					<tr>
 						<th>메뉴 가격</th>
-						<td>${menu.price}</td>
+						<td>${menu.price }</td>
 					</tr>
 					<tr>
 						<th>메뉴 사이즈</th>
-						<td>${menu.size}</td>
+						<td>${menu.size }</td>
 					</tr>
 					<tr>
 						<th>메뉴 칼로리</th>
-						<td>${menu.kcal}</td>
+						<td>${menu.kcal }</td>
+					</tr>
+					<tr>
+						<th>메뉴 재고</th>
+						<td>${menu.count }</td>
 					</tr>
 					<tr>
 						<th>메뉴 이미지</th>
-						<td>${menu.img}</td>
+						<td><img alt="" src="<c:url value="/resources/img/${menu.imgName}"/>"></td>
 					</tr>
 				</tbody>
 			</table>

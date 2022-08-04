@@ -5,7 +5,7 @@
 		<div class="gnb">
 			<div class="left-gnb">
 				<ul>
-					<li><a href="/cafe/index">홈</a></li>
+					<li><a href="/cafe/">홈</a></li>
 				</ul>
 			</div>
 			<div class="right-gnb">

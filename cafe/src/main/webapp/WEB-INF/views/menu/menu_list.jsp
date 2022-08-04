@@ -76,8 +76,13 @@
 						</tr>
 						<tr>
 							<th>칼로리</th>
-							<td>${menu.size}</td>
+							<td>${menu.kcal}</td>
 						</tr>
+						<tr>
+							<th>재고</th>
+							<td>${menu.count}</td>
+						</tr>
+						
 					</tbody>
 				</table>
 			</c:forEach>

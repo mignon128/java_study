@@ -96,12 +96,7 @@ section {
 	margin-top: 10px;
 }
 
-.phone {
-	height: 60px;
-	flex-wrap: wrap;
-}
-
-.add>input {
+.add>input, select {
 	width: 100%;
 	height: 45px;
 	line-height: 45px;
@@ -111,43 +106,8 @@ section {
 
 .add>input:focus {
 	outline: none;
-	border-color: rgba(65, 125, 122, .6);
-	box-shadow: 0 0 6px 2px rgba(65, 125, 122, .6);
-}
-
-.add>select.phoneNum_selec:focus {
-	outline: none;
-	border-color: rgba(65, 125, 122, .6);
-	box-shadow: 0 0 6px 2px rgba(65, 125, 122, .6);
-}
-
-select.phoneNum_selec {
-	height: 45px;
-	width: 30%;
-	font-size: 15px;
-}
-
-input.phoneNum {
-	width: calc(70% - 17px);
-}
-
-span.phoneNum_middle {
-	margin: 0 5px;
-}
-
-span.phone {
-	margin-top: 5px;
-	display: block;
-	text-align: right;
-	font-size: 13px;
-	color: red;
-	margin-left: 15px;
-	width: 100%;
-}
-
-.address1 {
-	width: 250px;
-	margin-right: 10px;
+	border-color: rgb(185, 204, 237, .6);
+	box-shadow: 0 0 6px 2px rgbargb(185, 204, 237, .6);
 }
 
 .btn-group {
@@ -169,7 +129,7 @@ span.phone {
 	display: flex;
 	justify-content: center;
 	height: 100%;
-	background: #417D7A;
+	background: #B9CCED;
 	border-radius: 30px;
 	width: 150px;
 	height: 50px;
@@ -198,47 +158,46 @@ button.btn-inner {
 			</div>
 			<div id="content-wrapper">
 				<div class="content">
-					<form:form method="post" modelAttribute="menu" enctype="multipart/form-data">
-						<!--  <div class="add">
-							<label>메뉴 카테고리</label>
-							<form:select path="category">
+					<form action="add_menu" method="post" enctype="multipart/form-data">
+						<div class="add">
+							<label>카테고리</label> <select name="category">
 								<option value="unknown">---선택---</option>
-								<form:options items="${CategoryList }" />
-							</form:select>
-						</div>-->
-						<div class="add">
-							<label>메뉴 이름</label>
-							<form:input path="name" />
-							<br>
+								<option value="커피">커피</option>
+								<option value="티">티</option>
+								<option value="프라푸치노">프라푸치노</option>
+							</select>
 						</div>
 						<div class="add">
-							<label>메뉴 가격</label>
-							<form:input path="price" />
-							<br>
+							<label>이름</label> <input type="text" name="name" /> <br>
 						</div>
 						<div class="add">
-							<label>메뉴 사이즈</label>
-							<form:input path="size" />
-							<br>
+							<label>가격</label> <input type="text" name="price" /> <br>
 						</div>
 						<div class="add">
-							<label>메뉴 칼로리</label>
-							<form:input path="kcal" />
-							<br>
+							<label>사이즈</label> <select name="size">
+								<option value="unknown">---선택---</option>
+								<option value="Tall">Tall</option>
+								<option value="Grande">Grande</option>
+								<option value="Venti">Venti</option>
+							</select>
 						</div>
 						<div class="add">
-							<label>메뉴 이미지</label>
-							<form:input type="file" path="imgFile"/>
-							<br>
+							<label>칼로리</label> <input type="text" name="kcal" /> <br>
+						</div>
+						<div class="add">
+							<label>재고</label> <input type="text" name="count" /> <br>
+						</div>
+						<div class="add">
+							<label>이미지</label> <input type="file" name="imgFile" /> <br>
 						</div>
 						<div class="btn-group">
 							<div class="i-btn">
 								<div class="btn">
-									<button type="submit" class="btn-inner">확인</button>
+									<button type="submit" class="btn-inner">등록</button>
 								</div>
 							</div>
 						</div>
-					</form:form>
+					</form>
 				</div>
 			</div>
 		</div>

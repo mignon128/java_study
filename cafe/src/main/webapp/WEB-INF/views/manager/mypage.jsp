@@ -243,9 +243,9 @@ section {
 				<div class="content list">
 					<ul class="info-list">
 						<li><a href="/cafe" class="mypage_list">매출관리</a></li>
+						<li><a href="/cafe/menu/add_menu" class="mypage_list">메뉴등록</a></li>
 						<li><a href="/cafe" class="mypage_list">주문관리</a></li>
 						<li><a href="/cafe" class="mypage_list">재고관리</a></li>
-						<li><a href="/cafe" class="mypage_list">회원관리</a></li>
 					</ul>
 				</div>
 			</div>
