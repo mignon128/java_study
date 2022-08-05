@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
@@ -110,43 +111,8 @@ section {
 
 .add>input:focus {
 	outline: none;
-	border-color: rgba(65, 125, 122, .6);
-	box-shadow: 0 0 6px 2px rgba(65, 125, 122, .6);
-}
-
-.add>select.phoneNum_selec:focus {
-	outline: none;
-	border-color: rgba(65, 125, 122, .6);
-	box-shadow: 0 0 6px 2px rgba(65, 125, 122, .6);
-}
-
-select.phoneNum_selec {
-	height: 45px;
-	width: 30%;
-	font-size: 15px;
-}
-
-input.phoneNum {
-	width: calc(70% - 17px);
-}
-
-span.phoneNum_middle {
-	margin: 0 5px;
-}
-
-span.phone {
-	margin-top: 5px;
-	display: block;
-	text-align: right;
-	font-size: 13px;
-	color: red;
-	margin-left: 15px;
-	width: 100%;
-}
-
-.address1 {
-	width: 250px;
-	margin-right: 10px;
+	border-color: rgb(185, 204, 237, .6);
+	box-shadow: 0 0 6px 2px rgb(185, 204, 237, .6);
 }
 
 .btn-group {
@@ -168,7 +134,7 @@ span.phone {
 	display: flex;
 	justify-content: center;
 	height: 100%;
-	background: #417D7A;
+	background: #B9CCED;
 	border-radius: 30px;
 	width: 150px;
 	height: 50px;
@@ -197,19 +163,19 @@ button.btn-inner {
 			</div>
 			<div id="content-wrapper">
 				<div class="content">
-					<form:form method="post" modelAttribute="category">
+					<form action="add_category" method="post">
 						<div class="add">
-							<label>카테고리 이름</label>
-							<form:input path="name" />
+							<label>카테고리</label>
+							<input type="text" name="name" /> <br>
 						</div>
 						<div class="btn-group">
 							<div class="i-btn">
 								<div class="btn">
-									<button type="submit" class="btn-inner">확인</button>
+									<button type="submit" class="btn-inner">등록</button>
 								</div>
 							</div>
 						</div>
-					</form:form>
+					</form>
 				</div>
 			</div>
 		</div>

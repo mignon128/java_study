@@ -22,11 +22,16 @@ public class CategoryDao {
 	
 	public void addCategory(Category category) {
 		String sql = "INSERT INTO Category (cname) VALUES (?)";
-		jdbcTemplate.update(sql, category.getName());
+		jdbcTemplate.update(sql, category.getCatename());
 	}
 
 	public List<Category> findAllCategory() {
 		String sql = "SELECT cid, cname, regDate FROM Category";
 		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Category>(Category.class));
+	}
+	
+	public List<Category> findCategoryByCid(long cid) {
+		String sql = "SELECT c.cid, c.cname,c, regDate WHERE c.cid=?";
+		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Category>(Category.class), cid);
 	}
 }

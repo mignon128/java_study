@@ -9,13 +9,8 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@ToString
 public class CategoryCommand {
 	private String name;
 	private Menu menu;
-	
-	public CategoryCommand() {
-		
-	}
+
 }

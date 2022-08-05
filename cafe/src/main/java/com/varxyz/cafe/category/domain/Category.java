@@ -13,10 +13,14 @@ import lombok.ToString;
 @ToString
 public class Category {
 	private long cid;
-	private String name;
+	private String catename;
 	private Menu menu;
 	
 	public Category() {
 		
+	}
+	
+	public Category(long cid) {
+		this.cid = cid;
 	}
 }

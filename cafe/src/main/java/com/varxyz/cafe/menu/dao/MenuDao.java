@@ -20,17 +20,17 @@ public class MenuDao {
 	}
 
 	public void addMenu(Menu menu) {
-		String sql = "INSERT INTO Menu (menuname, menuPrice, menuSize, menuKcal) VALUES (?, ?, ?, ?)";
-		jdbcTemplate.update(sql, menu.getName(), menu.getPrice(), menu.getSize(), menu.getKcal());
+		String sql = "INSERT INTO Menu (cid, menuname, menuPrice, menuSize, menuKcal, menuCount, imgName) VALUES (?, ?, ?, ?, ?, ?, ?)";
+		jdbcTemplate.update(sql, menu.getCid(), menu.getName(), menu.getPrice(), menu.getSize(), menu.getKcal(), menu.getCount(), menu.getImgName());
 	}
 
 	public List<Menu> findAllMenu() {
-		String sql = "SELECT mid, menuname, menuPrice, menuSize, menuKcal regDate FROM Menu";
+		String sql = "SELECT mid, menuname, menuPrice, menuSize, menuKcal, menuCount, imgName, regDate FROM Menu";
 		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Menu>(Menu.class));
 	}
 
-	public List<Menu> findMenuByctype(String ctype) {
-		String sql = "SELECT m.mid, m.menuname, m.menuPrice, m.menuSize, m.menuKcal, m.regDate FROM Menu m INNER JOIN Category c ON m.menuname = c.cid WHERE c.ctype=?";
-		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Menu>(Menu.class), ctype);
+	public Menu findMenuBycid(long cid) {
+		String sql = "SELECT m.mid, m.menuname, m.menuPrice, m.menuSize, m.menuKcal, m.menuCount, m.regDate FROM Menu m INNER JOIN Category c ON m.menuname = c.cid WHERE c.cid=?";
+		return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<Menu>(Menu.class), cid);
 	}
 }

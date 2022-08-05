@@ -16,5 +16,11 @@ public class HomeController {
 	public String mypage() {
 		return "/manager/mypage";
 	}
+
+//	
+//	@GetMapping("/manager/mypage")
+//	public String mypage() {
+//		return "/manager/mypage";
+//	}
 }
 //sandredirect = return "redirect:/index"; 

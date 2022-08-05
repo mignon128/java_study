@@ -25,7 +25,7 @@ public class MenuServiceImpl implements MenuService{
 	}
 
 	@Override
-	public List<Menu> findMenuBycid(String cid) {
-		return menuDao.findMenuByctype(cid);
+	public Menu findMenuBycid(long cid) {
+		return menuDao.findMenuBycid(cid);
 	}
 }

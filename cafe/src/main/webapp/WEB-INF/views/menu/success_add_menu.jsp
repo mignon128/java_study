@@ -65,10 +65,6 @@
 			<table>
 				<tbody>
 					<tr>
-						<th>메뉴 카테고리</th>
-						<td>${menu.category }</td>
-					</tr>
-					<tr>
 						<th>메뉴 이름</th>
 						<td>${menu.name }</td>
 					</tr>

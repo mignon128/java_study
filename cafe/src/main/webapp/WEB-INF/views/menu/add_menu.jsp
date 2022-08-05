@@ -160,11 +160,12 @@ button.btn-inner {
 				<div class="content">
 					<form action="add_menu" method="post" enctype="multipart/form-data">
 						<div class="add">
-							<label>카테고리</label> <select name="category">
+							<label>카테고리</label> <select name="cid">
 								<option value="unknown">---선택---</option>
-								<option value="커피">커피</option>
-								<option value="티">티</option>
-								<option value="프라푸치노">프라푸치노</option>
+								<option value="1001">커피</option>
+								<option value="1002">프라푸치노</option>
+								<option value="1003">티</option>
+								<option value="1004">케이스</option>
 							</select>
 						</div>
 						<div class="add">

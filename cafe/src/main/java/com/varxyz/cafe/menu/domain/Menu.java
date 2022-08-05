@@ -13,12 +13,15 @@ import lombok.ToString;
 @Setter
 public class Menu {
 	private long mid;
-	private String category;
+	private long cid;
+	private Category category;
 	private String name;
 	private double price;
 	private String size;
 	private double kcal;
 	private int count;
-//	private MultipartFile imgFile;
+	private MultipartFile imgFile;
 	private String imgName;
+	
 }
+

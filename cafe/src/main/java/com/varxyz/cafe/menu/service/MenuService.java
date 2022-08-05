@@ -13,5 +13,5 @@ public interface MenuService {
 	
 	void addMenu(Menu menu);
 	List<Menu> findAllMenu();
-	List<Menu> findMenuBycid(String cid);
+	Menu findMenuBycid(long cid);
 }

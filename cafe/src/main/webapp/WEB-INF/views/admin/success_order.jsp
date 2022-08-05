@@ -1,7 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,7 +45,7 @@
 	bottom: 7px;
 	left: 0;
 	z-index: -1;
-	background: #F6E7E6;
+	background: #EDE6DB;
 }
 
 .rezInfo th {
@@ -61,17 +59,7 @@
 	</header>
 	<div class="wrap">
 		<div class="title-wrap">
-			<h3 class="title">카테고리등록 완료</h3>
-		</div>
-		<div class="rezInfo">
-			<table>
-				<tbody>
-					<tr>
-						<th>이름</th>
-						<td>${category.name}</td>
-					</tr>
-				</tbody>
-			</table>
+			<h3 class="title">주문을 완료하였습니다</h3>
 		</div>
 	</div>
 </body>

@@ -155,7 +155,7 @@ section {
 	bottom: 7px;
 	left: 0;
 	z-index: -1;
-	background: #EDE6DB;
+	background: #F6E7E6;
 }
 
 .container>.content-wrapper {
