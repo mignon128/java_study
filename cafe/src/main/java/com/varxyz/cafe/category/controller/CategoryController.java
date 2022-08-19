@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.varxyz.cafe.category.domain.Category;
 import com.varxyz.cafe.category.service.CategoryServiceImpl;
-import com.varxyz.cafe.menu.controller.MemberVO;
-import com.varxyz.cafe.menu.domain.Menu;
 
 @Controller("category.categoryController")
 public class CategoryController {
