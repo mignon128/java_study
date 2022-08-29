@@ -5,10 +5,7 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.varxyz.banking.account.domain.Account;
-import com.varxyz.banking.account.domain.CheckingAccount;
-import com.varxyz.banking.account.domain.SavingsAccount;
-import com.varxyz.banking.customer.domain.Customer;
+import com.varxyz.banking.customer.Customer;
 
 public class CustomerAccountRowMapper implements RowMapper<Account> {
 

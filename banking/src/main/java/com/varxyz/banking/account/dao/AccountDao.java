@@ -13,6 +13,7 @@ import com.varxyz.banking.account.domain.Account;
 import com.varxyz.banking.account.domain.CheckingAccount;
 import com.varxyz.banking.account.domain.SavingsAccount;
 
+
 @Component("accountDao")
 public class AccountDao {
 	private JdbcTemplate jdbcTemplate;
@@ -46,7 +47,7 @@ public class AccountDao {
 				+ " a. interestRate, a.overAmount, a.redDate"
 				+ " FROM Account a INNER JOIN Customer c ON a.customerId = c.cid" + " WHERE c.email=?";
 
-		return jdbcTemplate.query(sql, new CustomerAccountRowMapper() {}, email);
+		return jdbcTemplate.query(sql, new CustomerAccountRowMapper(), email);
 	}
 
 	public void transfer(double money, String withdrawAccountNum, String depositAccountNum) {
@@ -70,7 +71,8 @@ public class AccountDao {
 
 	public List<Account> findAccountByCustomerId(long customerId) {
 		String sql = "SELECT a.aid, a.customerId, a.accountNum, a.accType, a.balance, a.interestRate, a.overAmount, a.regDate FROM Account a INNER JOIN Customer c ON a.customerId = c.cid WHERE a.customerId = ?";
-		return jdbcTemplate.query(sql, new CustomerAccountRowMapper() {}, customerId);
+		return jdbcTemplate.query(sql, new CustomerAccountRowMapper() {
+		}, customerId);
 	}
 
 }
